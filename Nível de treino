@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class GeradorTreino {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Bem-vindo ao Gerador de Treino!");
+        System.out.print("Informe seu nível de treino (iniciante, intermediário, avançado): ");
+        String nivelTreino = scanner.nextLine().toLowerCase();
+
+        String treino = gerarTreino(nivelTreino);
+
+        if (treino != null) {
+            System.out.println("\nTreino Gerado:");
+            System.out.println(treino);
+        } else {
+            System.out.println("\nNível de treino inválido. Por favor, escolha entre iniciante, intermediário ou avançado.");
+        }
+
+        // Fechar o scanner
+        scanner.close();
+    }
+
+    public static String gerarTreino(String nivelTreino) {
+        switch (nivelTreino) {
+            case "iniciante":
+                return "Treino para iniciantes: 30 minutos de cardio, 3 séries de 10 flexões, 3 séries de 12 agachamentos.";
+
+            case "intermediário":
+                return "Treino intermediário: 45 minutos de cardio, 4 séries de 12 flexões, 4 séries de 15 agachamentos, 3 séries de 12 levantamento de peso.";
+
+            case "avançado":
+                return "Treino avançado: 60 minutos de cardio, 5 séries de 15 flexões, 5 séries de 20 agachamentos, 4 séries de 15 levantamento de peso, 30 minutos de treino funcional.";
+
+            default:
+                return null;
+        }
+    }
+}

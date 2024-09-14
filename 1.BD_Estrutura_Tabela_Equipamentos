@@ -1,0 +1,18 @@
+CREATE DATABASE academia;
+
+USE academia;
+
+-- Tabela para armazenar informações sobre os equipamentos
+CREATE TABLE equipamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL UNIQUE,
+    descricao TEXT NOT NULL
+);
+
+-- Tabela para armazenar as fotos dos equipamentos
+CREATE TABLE fotos_equipamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    equipamento_id INT,
+    url_foto VARCHAR(255) NOT NULL,
+    FOREIGN KEY (equipamento_id) REFERENCES equipamentos(id)
+);

@@ -1,0 +1,7 @@
+-- Buscar descrição do exercício
+SELECT descricao FROM equipamentos WHERE nome = 'Leg Press';
+
+-- Buscar fotos do equipamento
+SELECT url_foto FROM fotos_equipamentos
+JOIN equipamentos ON equipamentos.id = fotos_equipamentos.equipamento_id
+WHERE equipamentos.nome = 'Leg Press';

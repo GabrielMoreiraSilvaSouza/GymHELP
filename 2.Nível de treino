@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário que selecione seu nível
+        System.out.println("Selecione seu nível de habilidade:");
+        System.out.println("1. Iniciante");
+        System.out.println("2. Intermediário");
+        System.out.println("3. Avançado");
+        System.out.print("Digite o número correspondente ao seu nível: ");
+        int nivel = scanner.nextInt();
+
+        // Gera o treino com base na seleção do nível
+        switch (nivel) {
+            case 1:
+                gerarTreinoIniciante();
+                break;
+            case 2:
+                gerarTreinoIntermediario();
+                break;
+            case 3:
+                gerarTreinoAvancado();
+                break;
+            default:
+                System.out.println("Opção inválida. Por favor, selecione 1, 2 ou 3.");
+                break;
+        }
+
+        // Fecha o scanner
+        scanner.close();
+    }
+
+    // Métodos para gerar treinos para cada nível
+    private static void gerarTreinoIniciante() {
+        System.out.println("Treino para Iniciante:");
+        System.out.println("1. Leg Press - 3 séries de 12 repetições");
+        System.out.println("2. Máquina de Peito - 3 séries de 10 repetições");
+        System.out.println("3. Remada Baixa - 3 séries de 12 repetições");
+        System.out.println("4. Abdominal na Máquina - 3 séries de 15 repetições");
+    }
+
+    private static void gerarTreinoIntermediario() {
+        System.out.println("Treino para Intermediário:");
+        System.out.println("1. Agachamento na Smith Machine - 4 séries de 10 repetições");
+        System.out.println("2. Supino com Halteres - 4 séries de 8 repetições");
+        System.out.println("3. Puxada na Polia Alta - 4 séries de 10 repetições");
+        System.out.println("4. Abdominal na Bola Suíça - 4 séries de 20 repetições");
+        System.out.println("5. Rosca Direta com Barra - 4 séries de 12 repetições");
+    }
+
+    private static void gerarTreinoAvancado() {
+        System.out.println("Treino para Avançado:");
+        System.out.println("1. Agachamento Livre com Barra - 5 séries de 8 repetições");
+        System.out.println("2. Supino Inclinado com Halteres - 5 séries de 6 repetições");
+        System.out.println("3. Puxada na Polia Baixa com Pegada Neutra - 5 séries de 8 repetições");
+        System.out.println("4. Abdominal na Máquina com Peso - 5 séries de 25 repetições");
+        System.out.println("5. Remada Curvada com Barra - 5 séries de 10 repetições");
+        System.out.println("6. Extensão de Tríceps na Polia Alta - 5 séries de 12 repetições");
+    }
+}

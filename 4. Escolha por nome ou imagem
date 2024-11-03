@@ -1,0 +1,86 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class GymHelp {
+
+    // Mapeamento de equipamentos e suas descrições
+    private static final Map<String, String> equipamentos = new HashMap<>();
+    
+    static {
+        equipamentos.put("Leg Press", "Sente-se na máquina, ajuste o peso e coloque os pés na plataforma. Empurre a plataforma para longe do corpo, mantendo os joelhos alinhados com os pés.");
+        equipamentos.put("Máquina de Peito", "Sente-se na máquina, ajuste o assento e as alças. Empurre as alças para frente até que seus braços estejam estendidos.");
+        equipamentos.put("Remada Baixa", "Sente-se na máquina, segure as alças e puxe-as em direção ao tronco, mantendo os cotovelos próximos ao corpo.");
+        equipamentos.put("Abdominal na Máquina", "Ajuste o assento e a carga. Sente-se e contraia o abdômen para levantar o tronco, depois retorne lentamente à posição inicial.");
+        // Adicione mais equipamentos e descrições conforme necessário
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("\nBem-vindo ao GymHELP!");
+            System.out.println("Escolha uma opção:");
+            System.out.println("1. Consultar informações por digitação");
+            System.out.println("2. Escolher entre imagens de equipamentos (opções numeradas)");
+            System.out.println("3. Sair");
+            System.out.print("Digite o número da opção desejada: ");
+            int opcao = scanner.nextInt();
+            scanner.nextLine(); // Consumir a nova linha
+
+            switch (opcao) {
+                case 1:
+                    consultarPorDigitacao(scanner);
+                    break;
+                case 2:
+                    escolherEntreImagens(scanner);
+                    break;
+                case 3:
+                    System.out.println("Saindo do aplicativo. Até logo!");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Opção inválida. Por favor, selecione 1, 2 ou 3.");
+            }
+        }
+    }
+
+    private static void consultarPorDigitacao(Scanner scanner) {
+        System.out.print("\nDigite o nome do equipamento que deseja saber como usar: ");
+        String nome = scanner.nextLine().trim(); // .trim() remove espaços em branco
+
+        if (nome.isEmpty()) {
+            System.out.println("Nome do equipamento não pode ser vazio.");
+            return;
+        }
+
+        String descricao = equipamentos.get(nome);
+        if (descricao != null) {
+            System.out.println("Descrição do " + nome + ":");
+            System.out.println(descricao);
+        } else {
+            System.out.println("Equipamento não encontrado. Verifique o nome e tente novamente.");
+        }
+    }
+
+    private static void escolherEntreImagens(Scanner scanner) {
+        System.out.println("\nEscolha um equipamento para consultar:");
+        int i = 1;
+        for (String equipamento : equipamentos.keySet()) {
+            System.out.println(i + ". " + equipamento);
+            i++;
+        }
+        
+        System.out.print("Digite o número do equipamento escolhido: ");
+        int escolha = scanner.nextInt();
+        scanner.nextLine(); // Consumir a nova linha
+
+        if (escolha >= 1 && escolha <= equipamentos.size()) {
+            String equipamentoEscolhido = (String) equipamentos.keySet().toArray()[escolha - 1];
+            System.out.println("Descrição do " + equipamentoEscolhido + ":");
+            System.out.println(equipamentos.get(equipamentoEscolhido));
+        } else {
+            System.out.println("Opção inválida. Por favor, selecione um número válido.");
+        }
+    }
+}

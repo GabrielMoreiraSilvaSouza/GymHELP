@@ -1,0 +1,11 @@
+-- Inserir equipamentos
+INSERT INTO equipamentos (nome, descricao) VALUES
+('Leg Press', 'Ajuste o assento e posicione seus pés na plataforma. Empurre com as pernas, estendendo os joelhos e voltando lentamente à posição inicial.'),
+('Peck Deck', 'Sente-se no equipamento e ajuste o assento. Puxe as alças com os braços para a frente, mantendo os cotovelos ligeiramente dobrados.');
+
+-- Inserir fotos dos equipamentos
+INSERT INTO fotos_equipamentos (equipamento_id, url_foto) VALUES
+(1, 'http://example.com/fotos/leg_press_frontal.jpg'),
+(1, 'http://example.com/fotos/leg_press_lateral.jpg'),
+(2, 'http://example.com/fotos/peck_deck_frontal.jpg'),
+(2, 'http://example.com/fotos/peck_deck_lateral.jpg');

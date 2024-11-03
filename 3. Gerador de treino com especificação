@@ -1,0 +1,121 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário que selecione seu nível
+        System.out.println("Bem-vindo ao GymHELP!");
+        System.out.println("Selecione seu nível de habilidade:");
+        System.out.println("1. Iniciante");
+        System.out.println("2. Intermediário");
+        System.out.println("3. Avançado");
+        System.out.print("Digite o número correspondente ao seu nível: ");
+        int nivel = scanner.nextInt();
+
+        // Gera o treino com base na seleção do nível
+        switch (nivel) {
+            case 1:
+                gerarTreinoIniciante();
+                break;
+            case 2:
+                gerarTreinoIntermediario();
+                break;
+            case 3:
+                gerarTreinoAvancado();
+                break;
+            default:
+                System.out.println("Opção inválida. Por favor, selecione 1, 2 ou 3.");
+                break;
+        }
+
+        // Fecha o scanner
+        scanner.close();
+    }
+
+    // Métodos para gerar treinos para cada nível
+    private static void gerarTreinoIniciante() {
+        System.out.println("\nTreino para Iniciante:");
+        System.out.println("1. Leg Press:");
+        System.out.println("   - Equipamento: Leg Press Machine");
+        System.out.println("   - Execução: Sente-se na máquina, ajuste o peso e coloque os pés na plataforma. Empurre a plataforma para longe do corpo, mantendo os joelhos alinhados com os pés.");
+        System.out.println("   - Séries/Repetições: 3 séries de 12 repetições");
+
+        System.out.println("2. Máquina de Peito:");
+        System.out.println("   - Equipamento: Chest Press Machine");
+        System.out.println("   - Execução: Sente-se na máquina, ajuste o assento e as alças. Empurre as alças para frente até que seus braços estejam estendidos.");
+        System.out.println("   - Séries/Repetições: 3 séries de 10 repetições");
+
+        System.out.println("3. Remada Baixa:");
+        System.out.println("   - Equipamento: Low Row Machine");
+        System.out.println("   - Execução: Sente-se na máquina, segure as alças e puxe-as em direção ao tronco, mantendo os cotovelos próximos ao corpo.");
+        System.out.println("   - Séries/Repetições: 3 séries de 12 repetições");
+
+        System.out.println("4. Abdominal na Máquina:");
+        System.out.println("   - Equipamento: Abdominal Machine");
+        System.out.println("   - Execução: Ajuste o assento e a carga. Sente-se e contraia o abdômen para levantar o tronco, depois retorne lentamente à posição inicial.");
+        System.out.println("   - Séries/Repetições: 3 séries de 15 repetições");
+    }
+
+    private static void gerarTreinoIntermediario() {
+        System.out.println("\nTreino para Intermediário:");
+        System.out.println("1. Agachamento na Smith Machine:");
+        System.out.println("   - Equipamento: Smith Machine");
+        System.out.println("   - Execução: Coloque a barra nas costas, ajuste o peso e posicione os pés na largura dos ombros. Agache mantendo a coluna reta e depois levante-se.");
+        System.out.println("   - Séries/Repetições: 4 séries de 10 repetições");
+
+        System.out.println("2. Supino com Halteres:");
+        System.out.println("   - Equipamento: Dumbbells and Bench");
+        System.out.println("   - Execução: Deite-se no banco com um halter em cada mão. Abaixe os halteres até o nível do peito e depois empurre-os para cima.");
+        System.out.println("   - Séries/Repetições: 4 séries de 8 repetições");
+
+        System.out.println("3. Puxada na Polia Alta:");
+        System.out.println("   - Equipamento: Lat Pulldown Machine");
+        System.out.println("   - Execução: Sente-se e agarre a barra com uma pegada larga. Puxe a barra em direção ao peito mantendo os cotovelos próximos ao corpo.");
+        System.out.println("   - Séries/Repetições: 4 séries de 10 repetições");
+
+        System.out.println("4. Abdominal na Bola Suíça:");
+        System.out.println("   - Equipamento: Stability Ball");
+        System.out.println("   - Execução: Sente-se na bola, caminhe para frente até que suas costas fiquem apoiadas na bola e faça flexões do tronco para o abdômen.");
+        System.out.println("   - Séries/Repetições: 4 séries de 20 repetições");
+
+        System.out.println("5. Rosca Direta com Barra:");
+        System.out.println("   - Equipamento: Barbell");
+        System.out.println("   - Execução: Em pé, segure a barra com as palmas das mãos voltadas para cima. Flexione os cotovelos para levantar a barra em direção aos ombros.");
+        System.out.println("   - Séries/Repetições: 4 séries de 12 repetições");
+    }
+
+    private static void gerarTreinoAvancado() {
+        System.out.println("\nTreino para Avançado:");
+        System.out.println("1. Agachamento Livre com Barra:");
+        System.out.println("   - Equipamento: Barbell and Squat Rack");
+        System.out.println("   - Execução: Posicione a barra nas costas, mantenha os pés na largura dos ombros e agache até que suas coxas estejam paralelas ao chão, depois levante-se.");
+        System.out.println("   - Séries/Repetições: 5 séries de 8 repetições");
+
+        System.out.println("2. Supino Inclinado com Halteres:");
+        System.out.println("   - Equipamento: Incline Bench and Dumbbells");
+        System.out.println("   - Execução: Deite-se em um banco inclinado com halteres. Abaixe os halteres até o nível do peito e depois empurre-os para cima.");
+        System.out.println("   - Séries/Repetições: 5 séries de 6 repetições");
+
+        System.out.println("3. Puxada na Polia Baixa com Pegada Neutra:");
+        System.out.println("   - Equipamento: Low Pulley Machine");
+        System.out.println("   - Execução: Sente-se e agarre a barra com uma pegada neutra. Puxe a barra em direção ao abdômen mantendo os cotovelos próximos ao corpo.");
+        System.out.println("   - Séries/Repetições: 5 séries de 8 repetições");
+
+        System.out.println("4. Abdominal na Máquina com Peso:");
+        System.out.println("   - Equipamento: Abdominal Machine with Weights");
+        System.out.println("   - Execução: Ajuste o peso e a posição do assento. Sente-se e contraia o abdômen para levantar o tronco, depois retorne lentamente.");
+        System.out.println("   - Séries/Repetições: 5 séries de 25 repetições");
+
+        System.out.println("5. Remada Curvada com Barra:");
+        System.out.println("   - Equipamento: Barbell");
+        System.out.println("   - Execução: Com uma pegada mais larga que a largura dos ombros, incline-se para frente e puxe a barra em direção ao abdômen.");
+        System.out.println("   - Séries/Repetições: 5 séries de 10 repetições");
+
+        System.out.println("6. Extensão de Tríceps na Polia Alta:");
+        System.out.println("   - Equipamento: High Pulley Machine");
+        System.out.println("   - Execução: Sente-se e segure a barra com uma pegada pronada. Estenda os cotovelos para baixo, contraindo os tríceps.");
+        System.out.println("   - Séries/Repetições: 5 séries de 12 repetições");
+    }
+}

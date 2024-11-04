@@ -11,6 +11,16 @@
             margin: 0;
             padding: 0;
             background-color: #ffffff; /* Fundo branco */
+            display: flex; /* Usando flexbox para alinhar a faixa verde */
+        }
+        .container {
+            flex: 1; /* Ocupa o espaço disponível */
+            padding: 20px;
+        }
+        .sidebar {
+            width: 200px; /* Largura da faixa verde */
+            background-color: #cdfe19; /* Verde */
+            height: 100vh; /* Altura total */
         }
         header {
             background-color: #1b32f8; /* Azul */
@@ -47,19 +57,13 @@
             margin: 10px auto;
         }
         .developer {
-            text-align: center;
+            text-align: left; /* Alinhamento à esquerda */
             margin-bottom: 20px;
             display: flex;
             align-items: center; /* Alinha verticalmente */
-            justify-content: center; /* Centraliza horizontalmente */
         }
         .developer img {
             margin-right: 15px; /* Espaço entre a imagem e a descrição */
-        }
-        .developer .info {
-            background-color: #cdfe19; /* Verde */
-            padding: 10px;
-            border-radius: 5px; /* Arredondar os cantos */
         }
         h2, h3 {
             font-family: 'Bebas Neue', sans-serif; /* Fonte para os títulos */
@@ -71,6 +75,7 @@
         }
         h3 {
             font-size: 24px;
+            text-align: left; /* Alinhamento à esquerda */
         }
         .github-title {
             text-align: center;
@@ -81,63 +86,68 @@
             text-align: center;
             margin-top: 10px;
             font-size: 18px;
+            color: black; /* Cor preta */
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#sobre">Sobre o App</a>
-        <a href="#github">GitHub</a>
-        <a href="#desenvolvedores">Desenvolvedores</a>
-    </nav>
+    <div class="sidebar"></div> <!-- Faixa verde à esquerda -->
+    
+    <div class="container">
+        <nav>
+            <a href="#sobre">Sobre o App</a>
+            <a href="#github">GitHub</a>
+            <a href="#desenvolvedores">Desenvolvedores</a>
+        </nav>
 
-    <section id="sobre">
-        <h2>GymHELP facilitando o seu treino</h2>
-        <p>GymHELP - Facilitando seu treino é um aplicativo inovador projetado para auxiliar de forma inteligente indivíduos que desejam praticar exercícios físicos em academias. Com uma abordagem abrangente, nosso aplicativo foi inicialmente concebido com o objetivo de simplificar a identificação e compreensão dos equipamentos de academia. Reconhecemos que a diversidade de equipamentos e suas funções específicas podem representar um desafio para os frequentadores de academia, tornando a memorização dessas informações complexa e demorada.</p>
-        <p>No entanto, à medida que desenvolvemos o GymHELP, percebemos que muitas pessoas desejam iniciar uma rotina de atividade física, mas enfrentam insegurança devido à falta de familiaridade com os equipamentos, sua operação e o impacto muscular de cada exercício. Diante disso, expandimos a proposta inicial do aplicativo para oferecer uma solução completa para esses desafios.</p>
-        <p>Com o GymHELP, os usuários podem não apenas identificar os equipamentos da academia, mas também acessar orientações claras sobre como utilizá-los corretamente, entender sua função nos grupos musculares e receber dicas sobre exercícios adequados para alcançar seus objetivos individuais.</p>
-        <p>Nossa missão é tornar a experiência na academia mais acessível, segura e eficaz para todos os praticantes de atividades físicas. Baixe o GymHELP hoje mesmo e descubra como podemos simplificar e aprimorar a sua jornada de treino.</p>
-    </section>
+        <section id="sobre">
+            <h2>GymHELP facilitando o seu treino</h2>
+            <p>GymHELP - Facilitando seu treino é um aplicativo inovador projetado para auxiliar de forma inteligente indivíduos que desejam praticar exercícios físicos em academias. Com uma abordagem abrangente, nosso aplicativo foi inicialmente concebido com o objetivo de simplificar a identificação e compreensão dos equipamentos de academia. Reconhecemos que a diversidade de equipamentos e suas funções específicas podem representar um desafio para os frequentadores de academia, tornando a memorização dessas informações complexa e demorada.</p>
+            <p>No entanto, à medida que desenvolvemos o GymHELP, percebemos que muitas pessoas desejam iniciar uma rotina de atividade física, mas enfrentam insegurança devido à falta de familiaridade com os equipamentos, sua operação e o impacto muscular de cada exercício. Diante disso, expandimos a proposta inicial do aplicativo para oferecer uma solução completa para esses desafios.</p>
+            <p>Com o GymHELP, os usuários podem não apenas identificar os equipamentos da academia, mas também acessar orientações claras sobre como utilizá-los corretamente, entender sua função nos grupos musculares e receber dicas sobre exercícios adequados para alcançar seus objetivos individuais.</p>
+            <p>Nossa missão é tornar a experiência na academia mais acessível, segura e eficaz para todos os praticantes de atividades físicas. Baixe o GymHELP hoje mesmo e descubra como podemos simplificar e aprimorar a sua jornada de treino.</p>
+        </section>
 
-    <section id="github">
-        <img src="codeimage.jpg" alt="Símbolo de Programação">
-        <h3>GitHub</h3>
-        <p class="github-link"><a href="https://github.com/GabrielMoreiraSilvaSouza/GymHELP" target="_blank">Clique aqui para visitar nosso repositório no GitHub</a></p>
-    </section>
+        <section id="github">
+            <h3>GitHub</h3>
+            <img src="codeimage.jpg" alt="Símbolo de Programação">
+            <p class="github-link"><a href="https://github.com/GabrielMoreiraSilvaSouza/GymHELP" target="_blank">Clique aqui para visitar nosso repositório no GitHub</a></p>
+        </section>
 
-    <section id="desenvolvedores">
-        <h2>Desenvolvedores</h2>
-        <div class="developer">
-            <img src="DevDanilo.jpeg" alt="Foto do Desenvolvedor 1">
-            <div class="info">
-                <h3>Danilo Frasson</h3>
-                <p>Graduando do curso de Análise e Desenvolvimento de Sistemas pela Unifil - Londrina.</p>
+        <section id="desenvolvedores">
+            <h2>Desenvolvedores</h2>
+            <div class="developer">
+                <img src="DevDanilo.jpeg" alt="Foto do Desenvolvedor 1">
+                <div>
+                    <h3>Danilo Frasson</h3>
+                    <p>Graduando do curso de Análise e Desenvolvimento de Sistemas pela Unifil - Londrina.</p>
+                </div>
             </div>
-        </div>
-        <div class="developer">
-            <img src="DevGabriel.jpeg" alt="Foto do Desenvolvedor 2">
-            <div class="info">
-                <h3>Gabriel Moreira</h3>
-                <p>Graduando do curso de Análise e Desenvolvimento de Sistemas pela Unifil - Curitiba.</p>
+            <div class="developer">
+                <img src="DevGabriel.jpeg" alt="Foto do Desenvolvedor 2">
+                <div>
+                    <h3>Gabriel Moreira</h3>
+                    <p>Graduando do curso de Análise e Desenvolvimento de Sistemas pela Unifil - Curitiba.</p>
+                </div>
             </div>
-        </div>
-        <div class="developer">
-            <img src="DevNicole.jpeg" alt="Foto do Desenvolvedor 3">
-            <div class="info">
-                <h3>Nicole Brandilhone</h3>
-                <p>Graduando do curso de Análise e Desenvolvimento de Sistemas pela Unifil - Londrina.</p>
+            <div class="developer">
+                <img src="DevNicole.jpeg" alt="Foto do Desenvolvedor 3">
+                <div>
+                    <h3>Nicole Brandilhone</h3>
+                    <p>Graduando do curso de Análise e Desenvolvimento de Sistemas pela Unifil - Londrina.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Contato</h2>
-        <p>Email: seu-email@exemplo.com</p>
-        <div class="social-links">
-            <a class="button" href="seu-link-rede-social">Facebook</a>
-            <a class="button" href="seu-link-rede-social">Instagram</a>
-            <a class="button" href="seu-link-rede-social">Twitter</a>
-        </div>
-    </section>
+        <section>
+            <h2>Contato</h2>
+            <p>Email: seu-email@exemplo.com</p>
+            <div class="social-links">
+                <a class="button" href="seu-link-rede-social">Facebook</a>
+                <a class="button" href="seu-link-rede-social">Instagram</a>
+                <a class="button" href="seu-link-rede-social">Twitter</a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

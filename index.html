@@ -4,87 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GymHELP - Seu App de Treinos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Body+Grotesque&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Body Grotesque', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* Fundo suave */
+            background-color: #ffffff; /* Fundo branco */
         }
         header {
             background-color: #1b32f8; /* Azul */
             color: white;
-            padding: 20px;
+            padding: 10px 20px;
             text-align: center;
+        }
+        nav {
+            background-color: #1b32f8; /* Azul */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
         }
         section {
             padding: 30px;
             margin: 20px;
-            background: #cdfe19; /* Verde claro */
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         img {
-            max-width: 150px;
-            border-radius: 50%;
+            max-width: 100px;
             display: block;
             margin: 10px auto;
         }
         h2 {
             font-size: 28px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #cdfe19; /* Verde */
+            text-align: center;
         }
         h3 {
             font-size: 24px;
             margin-top: 10px;
-            font-family: 'Montserrat', sans-serif;
+            text-align: center;
         }
         .developer {
             text-align: center;
             margin-bottom: 20px;
         }
-        .button {
-            background-color: #1b32f8;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .social-links {
+        .github-title {
+            text-align: center;
+            font-size: 28px;
             margin-top: 20px;
+        }
+        .github-link {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao GymHELP!</h1>
-        <p>O seu aplicativo de treinos personalizado.</p>
-    </header>
+    <nav>
+        <a href="#sobre">Sobre o App</a>
+        <a href="#github">GitHub</a>
+        <a href="#desenvolvedores">Desenvolvedores</a>
+    </nav>
 
-    <section>
+    <section id="sobre">
         <h2>GymHELP facilitando o seu treino</h2>
-        <p>O GymHELP é um aplicativo inovador projetado para auxiliar de forma inteligente indivíduos que desejam praticar exercícios físicos em academias. Com uma abordagem abrangente, nosso aplicativo foi inicialmente concebido com o objetivo de simplificar a identificação e compreensão dos equipamentos de academia...</p>
+        <p>GymHELP - Facilitando seu treino é um aplicativo inovador projetado para auxiliar de forma inteligente indivíduos que desejam praticar exercícios físicos em academias. Com uma abordagem abrangente, nosso aplicativo foi inicialmente concebido com o objetivo de simplificar a identificação e compreensão dos equipamentos de academia. Reconhecemos que a diversidade de equipamentos e suas funções específicas podem representar um desafio para os frequentadores de academia, tornando a memorização dessas informações complexa e demorada.</p>
+        <p>No entanto, à medida que desenvolvemos o GymHELP, percebemos que muitas pessoas desejam iniciar uma rotina de atividade física, mas enfrentam insegurança devido à falta de familiaridade com os equipamentos, sua operação e o impacto muscular de cada exercício. Diante disso, expandimos a proposta inicial do aplicativo para oferecer uma solução completa para esses desafios.</p>
+        <p>Com o GymHELP, os usuários podem não apenas identificar os equipamentos da academia, mas também acessar orientações claras sobre como utilizá-los corretamente, entender sua função nos grupos musculares e receber dicas sobre exercícios adequados para alcançar seus objetivos individuais.</p>
+        <p>Nossa missão é tornar a experiência na academia mais acessível, segura e eficaz para todos os praticantes de atividades físicas. Baixe o GymHELP hoje mesmo e descubra como podemos simplificar e aprimorar a sua jornada de treino.</p>
     </section>
 
-    <section>
+    <section id="github">
+        <img src="codeimage.jpg" alt="Símbolo de Programação">
+        <h3>GitHub</h3>
+        <p class="github-link"><a href="https://github.com/GabrielMoreiraSilvaSouza/GymHELP" target="_blank">Clique aqui para visitar nosso repositório no GitHub</a></p>
+    </section>
+
+    <section id="desenvolvedores">
         <h2>Desenvolvedores</h2>
         <div class="developer">
-            <h3>Desenvolvedor 1: Danilo Frasson</h3>
             <img src="DevDanilo.jpeg" alt="Foto do Desenvolvedor 1">
-            <p>Descrição breve sobre o desenvolvedor 1.</p>
+            <h3>Danilo Frasson</h3>
+            <p>Graduando do curso de Análise e Desenvolvimento de Sistemas pela Unifil - Londrina.</p>
         </div>
         <div class="developer">
-            <h3>Desenvolvedor 2: Gabriel Moreira</h3>
             <img src="DevGabriel.jpeg" alt="Foto do Desenvolvedor 2">
-            <p>Descrição breve sobre o desenvolvedor 2.</p>
+            <h3>Gabriel Moreira</h3>
+            <p>Graduando do curso de Análise e Desenvolvimento de Sistemas pela Unifil - Curitiba.</p>
         </div>
         <div class="developer">
-            <h3>Desenvolvedor 3: Nicole Brandilhone</h3>
             <img src="DevNicole.jpeg" alt="Foto do Desenvolvedor 3">
-            <p>Descrição breve sobre o desenvolvedor 3.</p>
+            <h3>Nicole Brandilhone</h3>
+            <p>Graduando do curso de Análise e Desenvolvimento de Sistemas pela Unifil - Londrina.</p>
         </div>
     </section>
 
